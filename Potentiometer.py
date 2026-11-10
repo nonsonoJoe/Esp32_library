@@ -1,3 +1,4 @@
+from AtDC import AtDC
 
 class Potentiometer:
     """

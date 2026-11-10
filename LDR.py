@@ -1,3 +1,4 @@
+from AtDC import AtDC
 class LDR:
     """
     Questa classe modella un Fotoresistore (light dependent resistor). Un oggetto LDR è composto da un AtDC.

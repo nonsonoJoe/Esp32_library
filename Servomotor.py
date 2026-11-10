@@ -1,3 +1,4 @@
+from PuWM import PuWM
 class Servomotor:
     """
     Questa classe modella un servomotore.
