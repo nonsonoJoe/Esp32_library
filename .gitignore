@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+#Le mie cose che ignoro
+.vscode/
+ESP32_GENERIC*
+Esercitazione_*
