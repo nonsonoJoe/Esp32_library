@@ -1,6 +1,6 @@
 from machine import Pin, PWM
 class PuWM:
-    """
+    """!
     @brief Questa classe modella un led o qualsiasi componente controllato con la PWM (pulse width modulation).
     @details Espone i metodi costruttore(n,f), set_duty(d), set_freq(f), get_duty()
     """
@@ -9,7 +9,7 @@ class PuWM:
     REPL_PINS = (1,3)
 
     def __init__(self, n, f=5000):
-        """
+        """!
         @brief Inizializza una nuova istanza.
         @param  n Il pin che va connesso al componente da controllare.
         @param  f Il valore della frequenza
@@ -20,7 +20,7 @@ class PuWM:
         self.set_freq(f)#chiamata a __check_freq() ulteriore.
 
     def __check_pin(self,p):
-        """
+        """!
         @brief Valuta la correttezza del pin.
         @param  p Il pin che va connesso al componente da controllare.
         @return Il valore di p. Può sollevare eccezioni
@@ -48,7 +48,7 @@ class PuWM:
         return f
                     
     def set_duty(self,d):
-        """
+        """!
         @brief Setta una nuova duty.
         @param  d La nuova percentuale di tempo alto (espressa da 0 a 1023)
         @throws ValueError Se d è fuori range.
@@ -59,14 +59,14 @@ class PuWM:
         self.__duty=new_duty
         
     def get_duty(self):
-        """
+        """!
         @brief Getter del duty cycle.
         @return Il duty cycle (espresso come intero da 0 a 1023)
         """
         return self.__duty
         
     def set_freq(self,f):
-        """
+        """!
         @brief Setta una nuova frequenza.
         @param  f La nuova frequenza (come valore da 1 a 5000)
         """
@@ -78,7 +78,7 @@ class PuWM:
         return self.__freq
     
     def deinit(self):
-        """
+        """!
         @brief Libera il canale PWM e il pin.
         @details Questa chiamata rende l'oggetto inutilizzabile
         """
