@@ -4,6 +4,7 @@ class Servomotor:
     Questa classe modella un servomotore.
     Espone i metodi costruttore(n,f), set_duty(d), set_angle(a), rilascia()
     Ricordati di importare PuWM e che marrone=massa, rosso=5V, giallo=pin dell'esp
+    Attaccami alla 5V
     """
     def __init__(self,n):
         """

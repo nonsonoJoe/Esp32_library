@@ -7,6 +7,7 @@ class StepMotor:
     Espone i metodi costruttore(pin1,pin2,pin3,pin4), step(direction, steps, delay, mode).
     NON attaccare i pin dell'esp al motore passo passo, attaccali al driver.
     Ricordati di collegare la massa del power supply alla massa dell'esp.
+    Attaccami alla 5V
     """
     # full-step con 2 bobine attive per ogni step
     # due bobine accese per ogni step -> più coppia
