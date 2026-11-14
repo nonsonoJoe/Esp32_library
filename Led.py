@@ -1,13 +1,13 @@
 from machine import Pin
 class Led:
-    """ 
-    Questa classe gestisce un led.
-    Espone i metodi costruttore(n), on(), off() e toggle().
-    Dopo che hai inzializzato il led, ricordati di forzarlo a uno stato iniziale
+    """!
+    @brief Questa classe modella un led.
+    @detailed Espone i metodi costruttore(n), on(), off() e toggle().
+    Dopo che hai inzializzato il led, ricordati di forzarlo a uno stato iniziale.
     """
     def __init__(self, n):
-        """
-        Inizializza una nuova istanza.
+        """!
+        @brief Inizializza una nuova istanza.
         :parameter n    Il pin da associare al controllo del led.
         """
         if(n<0 or n>39):
@@ -24,7 +24,15 @@ class Led:
         elif (err==2):
             raise Exception(f"Il pin {arg} non è utilizzabile per i led!")
         
-        
+    def __check_pin ():
+        pass
+
+    def load (lista):
+        pass
+
+    def async_execute():
+        pass
+    
     def on (self):
         """
         Accende il led.
