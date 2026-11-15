@@ -65,7 +65,8 @@ class Cronometro:
         @brief Restituisce il tempo trascorso dall'avvio.
 
         @return Millisecondi trascorsi (int). Può essere negativo se
-                l'inizio è stato spostato nel futuro con avanza().
+        l'inizio è stato spostato nel futuro con avanza().
+
         @exception TypeError se il cronometro non è attivo.
         """
         return ticks_diff(ticks_ms(), self._t0)
@@ -84,9 +85,7 @@ class Cronometro:
         """!
         @brief Posizione dentro un ciclo periodico.
 
-        @details Equivale a (tempo trascorso) % periodo. Utile per
-        pattern ciclici, ad esempio lampeggi con fase() < 250 su un
-        periodo di 500 ms.
+        @details Equivale a (tempo trascorso) % periodo.
 
         @param periodo  Durata del ciclo in millisecondi (deve essere > 0).
         @return Valore nell'intervallo [0, periodo).
