@@ -24,6 +24,7 @@ class Sequenziatore:
         ## @brief Indice del passo corrente dentro la sequenza, None se non c'è una sequenza
         self._indice=None
 
+
     def load_sequence(self,sequenza, ripeti=1):
         """!
         @brief Permette di caricare una sequenza, specificando quante volte deve essere ripetuta.
