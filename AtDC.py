@@ -14,6 +14,8 @@ class AtDC:
     _PIN_ADC1 = (32, 33, 34, 35, 36, 39)
     ## Pin dell'ADC2: non funzionano se il WiFi è attivo.
     _PIN_ADC2 = (2, 4, 13, 14, 15, 25, 26, 27)
+    ## Valore massimo della lettura (12 bit)
+    FONDO_SCALA=4095
 
     def __init__(self, n, min_value=0, max_value=100):
         """!
@@ -35,7 +37,7 @@ class AtDC:
         ## Valore normalizzato corrispondente alla lettura 0
         self._min_value = min_value
         ## Incremento del valore normalizzato per ogni unità di lettura grezza
-        self._scala = (max_value - min_value) / 4095
+        self._scala = (max_value - min_value) / self.FONDO_SCALA
 
     def _check_values(self, min_value, max_value):
         """!
@@ -73,4 +75,4 @@ class AtDC:
         @exception ValueError se min_v non è minore di max_v.
         """
         self._check_values(min_v, max_v)
-        return min_v + (max_v - min_v) * self.read() / 4095
+        return min_v + (max_v - min_v) * self.read() / self.FONDO_SCALA
