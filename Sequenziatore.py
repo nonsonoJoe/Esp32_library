@@ -24,7 +24,6 @@ class Sequenziatore:
         ## @brief Indice del passo corrente dentro la sequenza, None se non c'è una sequenza
         self._indice=None
 
-
     def load_sequence(self,sequenza, ripeti=1):
         """!
         @brief Permette di caricare una sequenza, specificando quante volte deve essere ripetuta.
@@ -35,12 +34,14 @@ class Sequenziatore:
         l'oggetto resta com'era.
         @param  sequenza La tupla in ingresso
         @param  ripeti Il numero di volte che si deve ripetere la sequenza, dove 0 indica che la sequenza si deve ripetere sempre
-        @exception ValueError se ripeti è negativo, se la sequenza è vuota o se un passo ha una durata non positiva.
+        @exception ValueError se ripeti è negativo o non intero, se la sequenza è vuota o se un passo ha una durata non positiva.
         """
         if ripeti<0:
             raise ValueError("Non puoi caricare un comportamento da ripetere un numero negativo di volte. Usa un numero non negativo!")
         if len(sequenza)==0:
             raise ValueError("La tupla passata è vuota. Mettine una con degli elementi del tipo (istruzione,tempo_ms)!")
+        if not isinstance(ripeti, int):
+            raise ValueError("Non puoi caricare un comportamento da ripetere un numero con virgola di volte. Usa un numero intero!")
         for passo in sequenza:
             if passo[1]<=0:
                 raise ValueError("Le istruzioni passate possono avere solo un tempo di esecuzione positivo passato in millisecondi!")
