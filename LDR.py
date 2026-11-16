@@ -23,7 +23,8 @@ class LDR:
         @details I controlli sul pin e sull'intervallo sono eseguiti dall'AtDC interno.
         @param n Il numero del pin da connettere al terminale di mezzo dell'LDR.
         @param min_value Il valore minimo della lettura normalizzata (corrisponde al buio).
-        @param max_value Il valore massimo della lettura normalizzata (corrisponde alla luce).@param invertito Se True, le letture vengono invertite per compensare il cablaggio opposto.
+        @param max_value Il valore massimo della lettura normalizzata (corrisponde alla luce).
+        @param invertito Se True, le letture vengono invertite per compensare il cablaggio opposto.
         @exception ValueError se il pin non è utilizzabile come ADC o se min_value non è minore di max_value.
         """
         ## ADC che esegue le letture
