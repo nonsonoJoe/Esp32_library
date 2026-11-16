@@ -1,4 +1,4 @@
-from machine import Pin
+from machine import Pin # type: ignore
 from Sequenziatore import Sequenziatore
 class Led:
     """!
